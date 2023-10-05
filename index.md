@@ -1,2 +1,6 @@
 ![Image](CD-No-Arg.png)
 ![Image](CD-Direc.png)
+![Image](Cat-no-Arg.png)
+![Image](Cat-Direc.png)
+![Image](Ls-No-Arg.png)
+![Image](CD-Direc.png)
