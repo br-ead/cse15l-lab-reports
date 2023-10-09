@@ -11,6 +11,7 @@ cd lecture1
 **Q2** The working directory changed to lecture 1.
 **Q3** There was no error.
 
+![Image](CD-File.png)
 Code:
 cd lecture1
 cd messages
@@ -27,12 +28,13 @@ cat
 **Q2** The ending result was nothing, since there was no file or input it started to just take in standard inputs.
 **Q3** There was no error, but by design it resorted back to standard input.
 
+![Image](Cat-Direct.png)
 Code:
 cat lecture1
 **Q1** The working directory is /home.
 **Q2** The ending result was an error, since lecture1 is a directory it resulted in an error message since cat is used for reading documents.
 **Q3** There was an error ebcause lecture1 is a directory and not a file.
-
+![Image](Cat-file.png)
 Code:
 cd lecture1
 cd messages
@@ -42,4 +44,8 @@ cat af.txt
 **Q3** There was no error.
 
 ![Image](Ls-No-Arg.png)
+Code:
+ls
 ![Image](CD-Direc.png)
+Code:
+ls lecture1
