@@ -46,12 +46,15 @@ cat af.txt
 ![Image](Ls-No-Arg.png)
 Code:  
 ls  
-![Image](CD-Direc.png)
+**Q1** The working directory was /home.
+**Q2** The ending result was a display of all directories and files within /home
+**Q3** There was no error
+![Image](Ls-Direc.png)
 Code:  
 ls lecture1  
-**Q1**
-**Q2**
-**Q3**
+**Q1** The working directory was /home/lecture1.  
+**Q2** The ending result was a display of all directories and files within lecture1.  
+**Q3** There was no error.
 
 **Q1**
 **Q2**
