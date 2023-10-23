@@ -1,2 +1,2 @@
 LabReport-2 Material
-![Image](geag.png)
+![Image](geag.PNG)
