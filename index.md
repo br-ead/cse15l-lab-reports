@@ -1,11 +1,8 @@
 **LabReport-2 Material**  
-
-  **Code**
 ![Image](geag.PNG)  
-
-  **Screnshot Number 1**
+**Code**  
 ![Image](Picture1.PNG)  
-
+**Screnshot Number 1**  
 I utilized formatting methods in order to get both a number, and the string "hello" into a single array for my list.  
 The relevant values for the strings were the inputted text, as well as the distinct position at which an item in the list was located. Through this way I was able to distinguish variables and make a numbered list.  
 No values were directly changed, except there was the usage of a new .txt document that held the data momentarily.  
