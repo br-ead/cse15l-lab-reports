@@ -1,7 +1,7 @@
 LabReport-2 Material
 ![Image](geag.PNG)
-![Image](geag.PNG)
-![Image](geag.)
-![Image](geag.png)
-![Image](geag.png)
-![Image](geag.png)
+![Image](Picture1.PNG)
+![Image](Picture2.PNG)
+![Image](priv key.png)
+![Image](auth keys.png)
+![Image](signin.png)
