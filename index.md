@@ -11,3 +11,5 @@ Again, no values were directly changed except the .txt document which was empty 
 ![Image](privkey.png)  
 ![Image](authkeys.png)  
 ![Image](signin.png)  
+
+I did not know how accessible and easy it was to created a remote key for signing in. I have done this previously but the method that we took in this lab went by a lot faster and overall took half the amount of time that it took me previously. I previously used github for ssh keys, so this is overall new to me.
