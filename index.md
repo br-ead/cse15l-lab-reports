@@ -16,6 +16,7 @@ Alike the first one, the handleRequest method was utilized. The argument used wa
 The relevant values were of course the position in the list, and what it contains. I did two duplicates to make sure that the list doesn't merge duplicates and instead gives them a distinct address.  
 
 The values input changed with every entry of https://0-0-0-0-4000-mv6p1skiufs90p3jj2ag13e3no.us.edusercontent.com/add-message?s='string'. It would, however, not change the method and instead it would simply read it if there were an input. The request would be processed and add a string alongside with a number in front of it corresponding to what position in the queue it is, and add that corresponding string. This worked for all values, including integers.  
+# Public and Private Key
 ![Image](PrivateKeyComp.png)  
 ![Image](PublicKeyssh.png)  
 ![Image](signin.png)  
