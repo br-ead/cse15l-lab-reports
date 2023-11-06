@@ -3,8 +3,10 @@
 **Code**  
 ![Image](Picture1.PNG)  
 **Screnshot Number 1**  
-I utilized formatting methods in order to get both a number, and the string "hello" into a single array for my list.  
+I utilized formatting methods in order to get both a number, and the string "hello" into a single array for my list. In this new example, the method handleRequest is called, and returns "Hello".  
+
 The relevant values for the strings were the inputted text, as well as the distinct position at which an item in the list was located. Through this way I was able to distinguish variables and make a numbered list.  
+
 No values were directly changed, except there was the usage of a new .txt document that held the data momentarily.  
 ![Image](Picture2.PNG)  
 **Screenshot Number2**
@@ -14,5 +16,6 @@ Again, no values were directly changed except the .txt document which was empty 
 ![Image](privkey.png)  
 ![Image](authkeys.png)  
 ![Image](signin.png)  
-**What I learned in W2/3**
+
+**What I learned in W2/3**  
 I did not know how accessible and easy it was to created a remote key for signing in. I have done this previously but the method that we took in this lab went by a lot faster and overall took half the amount of time that it took me previously. I previously used github for ssh keys, so this is overall new to me.
