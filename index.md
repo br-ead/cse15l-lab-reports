@@ -1,82 +1,24 @@
-# Lab 3
-#### Before  
-  ```
-  static int[] reversed(int[] arr) {    
-    int[] newArray = new int[arr.length];    
-    for(int i = 0; i < arr.length; i += 1) {    
-      arr[i] = newArray[arr.length - i - 1];    
-    }    
-    return arr;    
-  }  
-```
-#### After  
-```
-  static int[] reversed(int[] arr) {
-    int[] newArray = new int[arr.length];
-    for(int i = 0; i < arr.length; i += 1) {
-      newArray[i] = arr[arr.length - i - 1];
-    }
-    return newArray;
-  }
-```
-#### Issues with the code
-In the before code, the wrong value is being called for the array. It should be calling the newArray instead. There is also an issue with calling newArray[arr.length - i -1]. By calling this you are essentially only making arr[i] equal to 0. You ae basically returning an array of only 0. I made some adjustments, and returned the newArray and adjusting it to properly get the reversal.  
-#### Will induce a failure with the Before code.  
-```
-java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore ArrayTests
-```
-```
-  @Test
-  public void testReversed() {
-    int[] input1 = {1, 2, 3 };
-    assertArrayEquals(new int[]{ 3, 2, 1 }, ArrayExamples.reversed(input1));
-  }
-```
-![Image](FailTest.PNG)  
-#### Will not induce a failure with the After Code  
-```
-  public void testReversed() {
-    int[] input1 = {1, 2, 3 };
-    assertArrayEquals(new int[]{ 3, 2, 1 }, ArrayExamples.reversed(input1));
-  }
-```
-![Image](Pass.PNG)   
+**LabReport-2 Material**  
+![Image](geag.PNG)  
+**Code**  
+![Image](Picture1.PNG)  
+**Screnshot Number 1**  
+I utilized formatting methods in order to get both a number, and the string "hello" into a single array for my list. The handleRequest method was utilized with the argument https://0-0-0-0-4000-mv6p1skiufs90p3jj2ag13e3no.us.edusercontent.com/add-message?s=hello.
 
-#### Grep commands
+The relevant values for the strings were the inputted text, as well as the distinct position at which an item in the list was located. Through this way I was able to distinguish variables and make a numbered list.  
 
-# -c
-```
-grep -c "string" file.txt
-```
-![Image](Grep2c.PNG)   
-![Image](Grep1c.PNG)   
-This command will circumnavigate a file and return an integer corresponding with the number of times that string/pattern is visible in the file. Can be useful and is similar to ctrl-f  
-Information taken from https://www.geeksforgeeks.org/grep-command-in-unixlinux/#  
+There are no changes that occured to the method after I input a new string into the variable with add-message?s='string'. If I added a new string, the request would process and be read again to add a completely new variable, with its string and corresponding number. This can be seen if no output "" was input into https://0-0-0-0-4000-mv6p1skiufs90p3jj2ag13e3no.us.edusercontent.com.  
 
-# -i
-```
-grep -i "string" file.txt
-```
-![Image](Grep2i.PNG)   
-![Image](Grep1i.PNG)   
-This command will navigate a file and return all times that the string is present and disregards casing. It will return the entire sentence in which the string was found. Would help if you need to find out all times a solo string is in a text.  
-Information taken from https://www.geeksforgeeks.org/grep-command-in-unixlinux/#  
+![Image](Picture2.PNG)  
+**Screenshot Number2**  
+Alike the first one, the handleRequest method was utilized. The argument used was an integer, as well as two duplicate blocks of text. The argument was the https://0-0-0-0-4000-mv6p1skiufs90p3jj2ag13e3no.us.edusercontent.com/add-message?s=34, https://0-0-0-0-4000-mv6p1skiufs90p3jj2ag13e3no.us.edusercontent.com/add-message?s=34 and https://0-0-0-0-4000-mv6p1skiufs90p3jj2ag13e3no.us.edusercontent.com/add-message?s=testing_3  
 
-# -w
+The relevant values were of course the position in the list, and what it contains. I did two duplicates to make sure that the list doesn't merge duplicates and instead gives them a distinct address.  
 
-```
-grep -w "string" file.txt
-```
-![Image](Grep2w.PNG)   
-![Image](Grep1w.PNG)   
-This command will navigate through a file, and unlike -i, it will care about casing. It will return the entire string that the searched for string is apart of. If for example, our word is blank and we have blank.txt , it will return blank.txt alongside the remaining sentence. Can be useful for finding out the number of times a string is present even when hidden in other strings.  
-Information taken from https://www.geeksforgeeks.org/grep-command-in-unixlinux/#  
+The values input changed with every entry of https://0-0-0-0-4000-mv6p1skiufs90p3jj2ag13e3no.us.edusercontent.com/add-message?s='string'. It would, however, not change the method and instead it would simply read it if there were an input. The request would be processed and add a string alongside with a number in front of it corresponding to what position in the queue it is, and add that corresponding string. This worked for all values, including integers.  
+![Image](privkey.png)  
+![Image](authkeys.png)  
+![Image](signin.png)  
 
-# -l
-```
-grep -l "string" *
-```
-![Image](Grep2l.PNG)   
-![Image](Grep1l.PNG)   
-This command will navigate the entire directory and return all files in which the selected string is inside it. If for example, the current directory contains the files 1.txt and 2.txt, and the code is grep-l "hello" it will return 1.txt and/or 2.txt depending on if hello is within the two files. It can be useful for scanning entire chapters instead of just pages.  
-Information taken from https://www.geeksforgeeks.org/grep-command-in-unixlinux/#  
+**What I learned in W2/3**  
+I did not know how accessible and easy it was to created a remote key for signing in. I have done this previously but the method that we took in this lab went by a lot faster and overall took half the amount of time that it took me previously. I previously used github for ssh keys, so this is overall new to me.
