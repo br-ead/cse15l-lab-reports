@@ -4,6 +4,7 @@ The first step is to login. Because I set up my ssh earlier, all I have to do is
 ```
 ssh cs15lfa23sd@ieng6.ucsd.edu
 ```
+
 Followed by a 
 
 ```
@@ -76,7 +77,7 @@ FAILURES!!!
 Tests run: 2,  Failures: 1
 ```
 
-### 7
+### 7  
 You will now need to adjust the ListExamples.java to make sure the code runs accordingly. You can do it in vim.  
 First go to ListExamples.java, the source of the bug, in your terminal using ->  
 
@@ -109,7 +110,8 @@ Type '2'
 
 ### 8 
 We can now run the code again, to which we should reach a full completion of the test cases.  
-This can be done using
+This can be done using  
+
 ```
 bash test.sh
 ```
@@ -165,6 +167,7 @@ git push
  ```
 
 You then type in your information and password, I will not be showing you that.  
+
 ```
 text.... <enter> 
 ```
