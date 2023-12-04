@@ -1,46 +1,114 @@
+### 4
+The first step is to login. Because I set up my ssh earlier, all I have to do is write in terminal  
+```
+ssh cs15lfa23sd@ieng6.ucsd.edu
+```
+Followed by a ```<enter>```.  
+![Image](step4.PNG)  
+### 5
+Go to the github link. https://github.com/ucsd-cse15l-s23/lab7  
+Click on "Fork" and clone it to a repository.  
+Click on "< > Code"  
+Click on ssh and copy the text that begins with git@github.com -- Should look like git@github.com:ucsd-cse15l-s23/lab7w.git  
+Write out in terminal, git clone and paste. Should be like this  
+```
+git clone git@github.com:ucsd-cse15l-s23/lab7w.git
+```
+Followed by a ```<enter>```  
 
-# 1:
-#### Student:  
-Hello, I recently typed up my grade.sh, but I am starting to receive issues for no real reason. It worked previously when I was in lab doing it with another TA, and I do not know why it is not working now. 
-I think it may be something to do with my JUnit test, as there are a ton of errors regarding it, but that wouldn't make sense since I properly pathed to them when I was at the lab.
-![Image](dwaDWad.PNG)
-# 2:
-#### TA:  
-Hello, it appears that the JUnit test are never initialized. This may come as a result of the importing process. Some things that matter are if you are 
-utilizing bash or powershell? Did you switch from mac to windows and not adjust the : for macs or ; for windows?  
-# 3:
-#### Student:  
-Hello, I took your suggestion andd I realized that while this code would have worked on my macbook in class, but it would not ever work on my windows desktop at home. I did not switch the ':' into ';' and that lead me to these importation errors.
-![Image](dwadawdw.PNG)  
+### 6
+It should now clone into your repository.  
+You should now go into that directory, so in your terminal write  
+```
+cd lab7w
+```
+```<enter>```  
+You are now in lab7w directory.  
+Now you should run the test. Do this using  
+        
+```
+bash test.sh
+```
+```<enter>```  
+Your expected output should be a failure.  
+![Image](Step6.PNG)
+```
+        
+JUnit version 4.13.2
+..E
+Time: 0.671
+There was 1 failure:
+1) testMerge2(ListExamplesTests)
+org.junit.runners.model.TestTimedOutException: test timed out after 500 milliseconds
+        at java.base/java.util.Arrays.copyOf(Arrays.java:3512)
+        at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+        at java.base/java.util.ArrayList.grow(ArrayList.java:237)
+        at java.base/java.util.ArrayList.grow(ArrayList.java:244)
+        at java.base/java.util.ArrayList.add(ArrayList.java:454)
+        at java.base/java.util.ArrayList.add(ArrayList.java:467)
+        at ListExamples.merge(ListExamples.java:42)
+        at ListExamplesTests.testMerge2(ListExamplesTests.java:19)
 
-# 4:
-#### File/Directory Structure
-<pre>
-/home  
-  -/GradeServer.java  
-  -/Handler.java  
-  -/Server.java  
-  -/TestListExamples.java  
-  -/student-submission  
-    -/nullptr
-  -/grading-area  
-    -/nullptr
-  -/lib  
-    -/hamcrest-core-1.3.jar  
-    -/junit-4.13.2.jar  
-  -/grade.sh
-</pre>
-#### File contents  
-What I needed was a server for my general server. The contents of Server.java basically served to setup a handler, and created an internal server.There was also a grade server for the processes that needed to occur. Since I was importing repositories from outside of my desktop, I needed to host a server such that my programs could access them. This access was done with another file called ServerHttpHandler which was utilized by my server. This was all done in my /home.  
-I then had a file called Grade.sh where I kept all of my command lines. This is also where I had my issue regarding the : and
-;. In this file, it basically ran a ton of shell commands that ran all of the files in the home directory in a selected new directory called grading-area. The code is in my /home, and the grading-area was a directory created in my /home as well. The shell commands first deleted previous instances of student-submissions and grading area. It then cloaned the submission into a new instance of student-submission. Afterwards, it copied the imported file as well as the test file into the grading-area, before entering into it. It was then that both the JUnit test were access from an outside directory, and then run. (my issue ended up being regarding the access of the JUnit test, however).
-#### What I needed to do to get to the bug
-bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected
+FAILURES!!!
+Tests run: 2,  Failures: 1
+```
+### 7
+You will now need to adjust the ListExamples.java to make sure the code runs accordingly. You can do it in vim.  
+First go to ListExamples.java, the source of the bug, in your terminal using ->  
+```
+vim ListExamples.java
+```
+To navigate using vim, 'h' is left one character, 'l' is right one character, 'k' is up one line, and 'j' is down one line. Typing 'x' will delete a character, and typing 'i' will insert a character. We will then use :wq to 
+save and quit.  
 
-#### Edits needed  
-I needed to first make the transition from mac to windows. Albeit, it is a simple bug this has made me ponder at my desks for hours so writing this scenario is very realistic to me.  
+The error we get is because index1 should be index2 so we navigate to the line 45 where index1 is at. We will then navigate to the character '1' of index1, delete it using x, inserting in '2' using i, and 
+then save and quit using :wq.  
+``` j ``` 44 times  
+``` l ``` 11 times  
+``` x ``` 1 time  
+``` i ``` 1 time  
+Type '2'  
+```<esc>```  
+```:wq```  
+```<enter>```  
+### 8 
+We can now run the code again, to which we should reach a full completion of the test cases.  
+This can be done using
+```
+bash test.sh
+```
+```<enter>```  
+We will then come to the solution of  
+![Image](Step8.PNG)  
+```
+[cs15lfa23sd@ieng6-201]:lab7w:267$ bash test.sh
+JUnit version 4.13.2
+...
+Time: 0.147
 
-# 5
-#### Things I learned
-I did not know how to use vim so well originally, in all honestly I thought it didn't make sense and there was a ton of issues I had corresponding with it. After I utilized the entire tutorial, however, I started to get the hang of it and I didn't have much trouble editing documents within the terminal anymore. Utilizing the git functions is also quite fascinating, because I struggled with it before to go from local to server and this class taught a lot about it to me.
+OK (3 tests)
+
+[cs15lfa23sd@ieng6-201]:lab7w:268$
+```
+### 9
+The last step is to commit this to our repository. Thus, we want to send this to our repository now. We can do this using.
+```
+git add .
+```
+``` <enter> ```
+This will add everything edited within the directory to the staging area.  
+We will then establish our commit with the date of the commit to finish it up.
+```
+git commit -m "commit+date" 
+```
+``` <enter> ```
+It is then that we can push to github. This can be done using 
+```
+git push 
+```
+``` <enter> ```  
+You then type in your information and password, I will not be showing you that.  
+```text.... <enter> ```  
+``` text... <enter> ```  
+![Image](step9.PNG)
 
