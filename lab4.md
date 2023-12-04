@@ -1,9 +1,10 @@
-### 4
+![image](https://github.com/br-ead/cse15l-lab-reports/assets/97152810/5ef9f7fa-141c-4905-8552-64c4d57a7e5c)### 4
 The first step is to login. Because I set up my ssh earlier, all I have to do is write in terminal  
 ```
 ssh cs15lfa23sd@ieng6.ucsd.edu
 ```
 Followed by a ```<enter>```.
+![Image](step4.PNG)
 ### 5
 Go to the github link. https://github.com/ucsd-cse15l-s23/lab7  
 Click on "Fork" and clone it to a repository.  
@@ -30,7 +31,7 @@ bash test.sh
 ```
 ```<enter>```  
 Your expected output should be a failure.
-        
+![Image](Step6.PNG)
 ```
         
 JUnit version 4.13.2
@@ -77,6 +78,7 @@ bash test.sh
 ```
 ```<enter>```  
 We will then come to the solution of 
+![Image](Step8.PNG)
 ```
 [cs15lfa23sd@ieng6-201]:lab7w:267$ bash test.sh
 JUnit version 4.13.2
@@ -103,5 +105,9 @@ It is then that we can push to github. This can be done using
 ```
 git push 
 ```
-``` <enter> ```
+``` <enter> ```  
+You then type in your information and password, I will not be showing you that.  
+```text.... <enter> ```  
+``` text... <enter> ```  
+![Image](Step8.PNG)
 
