@@ -105,16 +105,22 @@ Type '2'
 
 ```
 <enter>
-```  
+```
+
 ### 8 
 We can now run the code again, to which we should reach a full completion of the test cases.  
 This can be done using
 ```
 bash test.sh
 ```
-```<enter>```  
+
+```
+<enter>
+```
+
 We will then come to the solution of  
 ![Image](Step8.PNG)  
+
 ```
 [cs15lfa23sd@ieng6-201]:lab7w:267$ bash test.sh
 JUnit version 4.13.2
@@ -125,8 +131,10 @@ OK (3 tests)
 
 [cs15lfa23sd@ieng6-201]:lab7w:268$
 ```
+
 ### 9
 The last step is to commit this to our repository. Thus, we want to send this to our repository now. We can do this using.
+
 ```
 git add .
 ```
@@ -134,6 +142,7 @@ git add .
 ``` 
 <enter>
 ```
+
 This will add everything edited within the directory to the staging area.  
 We will then establish our commit with the date of the commit to finish it up.
 
@@ -146,6 +155,7 @@ git commit -m "commit+date"
 ```
 
 It is then that we can push to github. This can be done using 
+
 ```
 git push 
 ```
@@ -155,7 +165,13 @@ git push
  ```
 
 You then type in your information and password, I will not be showing you that.  
-```text.... <enter> ```  
-``` text... <enter> ```  
+```
+text.... <enter> 
+```
+
+``` 
+text... <enter>
+ ```
+
 ![Image](step9.PNG)
 
