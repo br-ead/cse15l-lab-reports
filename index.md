@@ -3,7 +3,8 @@ The first step is to login. Because I set up my ssh earlier, all I have to do is
 ```
 ssh cs15lfa23sd@ieng6.ucsd.edu
 ```
-Followed by a ```<enter>```.  
+Followed by a ```<enter>``` .  
+
 ![Image](step4.PNG)  
 ### 5
 Go to the github link. https://github.com/ucsd-cse15l-s23/lab7  
@@ -30,10 +31,12 @@ Now you should run the test. Do this using
 bash test.sh
 ```
 ```<enter>```  
+
 Your expected output should be a failure.  
-![Image](Step6.PNG)
+
+![Image](Step6.PNG)  
+
 ```
-        
 JUnit version 4.13.2
 ..E
 Time: 0.671
