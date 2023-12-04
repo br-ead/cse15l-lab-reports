@@ -1,6 +1,38 @@
-### git clone https://github.com/ucsd-cse15l-s23/lab7 or git@github.com:ucsd-cse15l-s23/lab7.git
+### 4
+The first step is to login. Because I set up my ssh earlier, all I have to do is write
 ```
-[cs15lfa23sd@ieng6-201]:lab7w:229$ bash test.sh
+ssh cs15lfa23sd@ieng6.ucsd.edu
+```
+Followed by a <enter>. 
+### 5
+Go to the github link.  
+Click on "fork" and clone it to a repository.  
+Click on "< > Code"  
+Click on ssh and copy the text that begins with git@github.com -- Should look like git@github.com:ucsd-cse15l-s23/lab7w.git
+Write out in terminal, git clone and paste.  
+```
+git clone git@github.com:ucsd-cse15l-s23/lab7w.git
+```
+Followed by a <enter>  
+
+### 6
+It should now clone into your repository.  
+You should now go into that directory, so in your terminal write  
+```
+cd lab7w
+```
+<enter>  
+You are now in lab7w directory.  
+Now you should run the test. Do this using  
+        
+```
+bash test.sh
+```
+<enter>  
+Your expected output should be a failure.
+        
+```
+        
 JUnit version 4.13.2
 ..E
 Time: 0.671
@@ -19,6 +51,8 @@ org.junit.runners.model.TestTimedOutException: test timed out after 500 millisec
 FAILURES!!!
 Tests run: 2,  Failures: 1
 ```
+### 7
+You will now need to adjust the ListExamples.java to make sure the code runs accordingly.
 ## vim ListExamples.java
 ## j x10 to navigate to the selected line
 ## l x 62 to navigate to text
